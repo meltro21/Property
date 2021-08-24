@@ -1,0 +1,63 @@
+class Plot {
+  late String plotId,
+      buyerId,
+      plotNo,
+      length,
+      width,
+      marla,
+      totalAmount,
+      discount,
+      netAmount,
+      receivedAmount,
+      remainingAmount,
+      installments,
+      year,
+      month,
+      type,
+      date,
+      receivedInstallments,
+      remainingInstallments;
+
+  Plot(
+      {required this.plotId,
+      required this.buyerId,
+      required this.plotNo,
+      required this.length,
+      required this.width,
+      required this.marla,
+      required this.totalAmount,
+      required this.discount,
+      required this.netAmount,
+      required this.receivedAmount,
+      required this.remainingAmount,
+      required this.installments,
+      required this.year,
+      required this.month,
+      required this.type,
+      required this.date,
+      required this.receivedInstallments,
+      required this.remainingInstallments});
+
+  factory Plot.fromJson(Map<String, dynamic> json) {
+    return new Plot(
+      plotId: json['_id'].toString(),
+      buyerId: json['BuyerId'].toString(),
+      plotNo: json['PlotNo'].toString(),
+      length: json['Length'].toString(),
+      width: json['Width'].toString(),
+      marla: json['Marla'].toString(),
+      totalAmount: json['TotalAmount'].toString(),
+      discount: json['Discount'].toString(),
+      netAmount: json['NetAmount'].toString(),
+      receivedAmount: json['ReceivedAmount'].toString(),
+      remainingAmount: json['RemainingAmount'].toString(),
+      installments: json['Installments'].toString(),
+      year: json['Year'].toString(),
+      month: json['Month'].toString(),
+      type: json['Type'].toString(),
+      date: json['Date'].toString(),
+      receivedInstallments: json['ReceivedInstallments'].toString(),
+      remainingInstallments: json['RemainingInstallments'].toString(),
+    );
+  }
+}
